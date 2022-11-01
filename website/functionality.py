@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
-from .DBmodel import Task
 from . import db
 import json
 views = Blueprint('views', __name__)
@@ -18,39 +17,11 @@ def home():
 
 
 
-@views.route('/kanban', methods=["GET", "POST"])
-def kanban():
-    "Render the kanban board"
-    return render_template("kanban_board.html", user=current_user)
-
-
-@views.route('/delete-task', methods=['POST'])
-def delete_task():
-    "Deleting a task in the database"
-    task = json.loads(request.data)
-    taskId = task['taskId']
-    task = Task.query.get(taskId)
-    if task:
-        if task.user_id == current_user.id:
-            db.session.delete(task)
-            db.session.commit()
-
-    return jsonify({})
+@views.route('/browse', methods=["GET", "POST"])
+def browse():
+    "Render the restaurant browsing page"
+    return render_template("browse.html", user=current_user)
 
 
 
 
-@views.route('/move-task', methods=['POST'])
-def move_task():
-
-    "Moving a task to a different status "
-
-    task = json.loads(request.data)
-    taskId = task['taskId']
-    newStatus = task['newStatus']
-    task = Task.query.get(taskId)
-    if task:
-        if task.user_id == current_user.id:
-            task.stat = newStatus
-            db.session.commit()
-    return jsonify({})
