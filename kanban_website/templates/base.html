@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css') }}">
+ 
+    
+    <title>{% block title %}Thirre Mikun{% endblock %}</title>
+  </head>
+  <body>
+
+    <header>
+      <div>
+        <div>
+          <div class = "ag">
+            <div class="d4 d5 d6 b0 d7 ah am bf b6 d8 d9 da ax cd ao ap db dc">
+              <div class = "spacer _32"></div>
+              <div class="spacer _128"></div>
+              <div class="ag di dj cg">
+                <div class="cd ao ap db dk dl aw dm dn do"></div>
+              </div>
+              <div class="dp"></div>
+              <div class = "spacer _24"></div>
+              {% if user.is_authenticated %}
+              <a rel="nofollow"  tabindex="0" href="/login" data-test="header-sign-in" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci ax dr ds dt bn bo du">
+                <svg aria-hidden="true" focusable = "false" viewBox = "0 0 26 26" class="df dg c3 cc">
+                  <path fill-rule = "evenodd" clip-rule = "evenodd" d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"></path>
+                </svg>
+                <div class = "spacer _5"></div>
+                Log In
+              </a>
+              <div class = "spacer _18"></div>
+              <a rel = "nofollow" tabindex="0" href="/signup" data-test="header-sign-up" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci bj bk bl dv bn bo du">Sign Up</a>
+              {% else %}
+              <a rel="nofollow"  tabindex="0" href="/login" data-test="header-sign-in" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci ax dr ds dt bn bo du">
+                <svg aria-hidden="true" focusable = "false" viewBox = "0 0 26 26" class="df dg c3 cc">
+                  <path fill-rule = "evenodd" clip-rule = "evenodd" d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"></path>
+                </svg>
+                <div class = "spacer _5"></div>
+                "Log In" 
+              </a>
+              <div class = "spacer _18"></div>
+              <a rel = "nofollow" tabindex="0" href="/sign-up" data-test="header-sign-up" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci bj bk bl dv bn bo du">Sign Up</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type= "button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert alert-success alter-dismissable fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='index.js') }}"
+  ></script>
+
+  </body>
+</html>

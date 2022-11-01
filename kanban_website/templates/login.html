@@ -1,0 +1,131 @@
+
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+  <div id="root">
+    <div id="wrapper" style="display:flex ;flex-direction:column">
+      <div class="ae aj b4 b5 b6 b7 b8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="121" height="21" fill="none">
+          
+        </svg>
+      </div>
+      <div class="ap b9">
+        <div role="main" screen-test="PHONE_NUMBER_INITIAL" flow-test = "INITIAL" class="ae al ba bb bc ap bd be bf bg">
+          <form method="POST">
+            <div class="ap ae al b7 bh ba">
+              <div class="ae al bi">
+                <h1 id="title" class="bj bk bl bm bn bo bp"> Enter your credentials</h1>
+                <div class = "bq"></div>
+                <div class = "ae al br">
+                  <div class = "ae bs aj bt">
+                    <div id="phone-number-or-email-input-container" class="ae bs bu bv bw ao bx">
+                      <div class = "by ao">
+                        <input id = "EMAIL_ADDRESS" autocomplete="email" inputmode="email" type="email"
+                        autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your email address"
+                        aria-label="Enter your email address" class="bz c0 c1 bt c2 c3 c4 bw ao c5">
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "c7"></div>
+                  <div class = "ae bs aj bt">
+                    <div id="password-container" class="ae bs bu bv bw ao bx">
+                      <div class = "by ao">
+                        <input id = "PASSWORD" autocomplete="current-password" inputmode="password" type="password"
+                        autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your password"
+                        aria-label="Enter your password" class="bz c0 c1 bt c2 c3 c4 bw ao c5">
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "c7"></div>
+                  <button class="dn do c1 d1 ae c0 aj d2 d3 bz d4 d5 c3 d6 d7 d8 bx d9 da dp dq" id = "forward-button" type="submit" data-test="forward-button">
+                    <div class="ae b7 aj ao">
+                      <div></div>
+                      <div>Continue</div>
+                      <div></div>
+                    </div>
+                  </button>
+                  <p class="c8 c9 ca bo cb"></p>
+                  <div class="c7"></div>
+                  <div>
+                    <div class="ae aj cc cd ce cf cg ch ci cj ck cl cm cn">
+                      
+                      <p class = "co c9 cp">or</p>
+                    </div>
+                    <div class = "cq"></div>
+                    <div class = "uwa-capture">
+                      <div class="cr cs">
+                        <button class="d0 bp c1 d1 ae c0 aj d2 d3 bz d4 d5 c3 d6 d7 d8 bx d9 da db dc ao" my-attr = "this-attr" data-tracking-name="social">
+                          <div class="ae b7 aj ao">
+                            <div></div>
+                            <div>
+                              <div class = "ae aj at">
+                                <div class="ae aj cu">
+                                  <div>
+                                    <svg width="18" height="18" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg" class="cv cw" preserveAspectRatio="xMidYMid">
+                                      <path d ="M255.9 133.5c0-10.8-.9-18.6-2.8-26.7H130.6v48.4h71.9a63.8 63.8 0 01-26.7 42.4l-.2 1.6 38.7 30 2.7.3c24.7-22.8 38.9-56.3 38.9-96"
+                                      fill="#4285F4"></path>
+                                      <path d="M130.6 261.1c35.2 0 64.8-11.6 86.4-31.6l-41.2-32c-11 7.8-25.8 13.1-45.2 13.1a78.6 78.6 0 01-74.3-54.2l-1.5.1-40.3 31.2-.6 1.5C35.4 231.8 79.5 261 130.6 261"
+                                      fill="#34A853"></path>
+                                      <path d="M56.3 156.4a80.4 80.4 0 01-.2-51.7V103L15.3 71.3l-1.4.6a130.7 130.7 0 000 117.3l42.4-32.8"
+                                      fill="#FBBC05"></path>
+                                      <path d="M130.6 50.5c24.5 0 41 10.6 50.4 19.4L218 34C195.2 13 165.8 0 130.6 0 79.5 0 35.4 29.3 13.9 72l42.2 32.7a79 79 0 0174.4-54.2" fill="#EB4335"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class= "ae aj">
+                                  <p class = "c1 d1 bo dd d5"> Log In with Google</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="uwa-capture">
+                      <div class = "cr cs">
+                        <button class="d0 bp c1 d1 ae c0 aj d2 d3 bz d4 d5 c3 d6 d7 d8 bx d9 da db dc ao" my-attr = "this-attr" data-tracking-name="social" data-test="facebook">
+                          <div class = "ae b7 aj ao">
+                            <div></div>
+                            <div>
+                              <div class = "ae aj at">
+                                <div class="ae aj cu">
+                                  <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 266.9 266.9">
+                                      <path fill="#3C5A99"d="M248 262.3c8 0 14.3-6.4 14.3-14.2V18.8c0-7.8-6.4-14.2-14.2-14.2H18.8C11 4.6 4.6 11 4.6 18.8v229.3c0 7.8 6.4 14.2 14.2 14.2h229.3z"></path>
+                                      <path fill="#FFF" d="M182.4 262.3v-99.8H216l5-38.9h-38.5V98.8c0-11.3 3.1-19 19.3-19h20.6V45c-3.6-.4-15.8-1.5-30-1.5-29.7 0-50 18.1-50 51.4v28.7h-33.6v38.9h33.5v99.8h40.2z"></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class = "ae aj">
+                                  <p class = "c1 d1 bo dd d5"> Log In with Facebook</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="de bi df"></div>
+                  <div class="dg"></div>
+                  <p id = "lkg" class="dh d1 bo di dj">
+                    Don't have an account yet? <a href="/sign-up" style="color:black ;">Sign Up</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    
+    </div>
+  </div>
+</body>
+
+
