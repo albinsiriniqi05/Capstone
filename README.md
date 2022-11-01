@@ -1,4 +1,4 @@
-# Kanban Board with Flask and HTML
+# Food Delivery App
 
 ## Setup & Installtion
 
