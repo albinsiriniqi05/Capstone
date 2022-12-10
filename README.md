@@ -1,5 +1,8 @@
 # Food Delivery App
 
+
+
+
 ## Setup & Installtion
 
 Make sure you have the latest version of Python installed.
@@ -36,18 +39,4 @@ python main.py
 
 Go to `http://127.0.0.1:5000`
 
-## To run the unittests:
 
-Make sure you are in the Albin-Kanban directory. 
-
-Run the following command:
-
-```bash
-pytest
-```
-
-
-
-## Credits for the project:
-
-I was inspired by: https://www.youtube.com/watch?v=yKHJsLUENl0 for this project. 
