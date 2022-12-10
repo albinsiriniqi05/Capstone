@@ -1,0 +1,123 @@
+.body-content {
+    
+    position: relative;
+    top: 60px;
+    height: 120%;
+}
+
+
+
+body {
+    font-size: 1rem;
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.site-wrap {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    position: fixed;
+}
+
+.horizontal-bar{
+    
+    position: relative;
+    height: 100%;
+    right: 1294px;
+    border-right: 3px solid #333;
+}
+
+.res{
+    
+    position: relative;
+    height: 260px;
+    top: 0px;
+    width: 270px;
+    left: 0px;
+    margin-left: 20px;
+    display: inline-block;
+    flex-flow: row wrap;
+    margin-top: 10px;
+    
+}
+
+.pic{
+    position: relative;
+    height: 140px;
+    top: 0;
+    width: 100%;
+}
+
+.restoranbanner {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    image-rendering: auto;
+}
+
+.content-table{
+    background-color: black;
+    position: relative;
+    height: 46.5%;
+}
+
+.text{
+
+    position: relative;
+    height: 20%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 70px;
+    top:10px;
+    font-size: 20px;
+
+}
+
+.restaurants{
+    
+    position: absolute;
+    top: 30px;
+    left: 243px;
+    height: 100%;
+    width: 80%;
+}
+
+.small-text{
+    position: relative;
+    top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: gray;
+}
+
+.menu-button{
+    position: relative;
+    top:20px;
+    width: 80px;
+    margin-left: 84px;
+    top: 100;
+    margin-top: 10px;
+}
+
+.btn{
+    border-radius: 30px;
+    padding-left: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    background-color:aqua ;
+    width: 70px;
+    height: 30px;
+}

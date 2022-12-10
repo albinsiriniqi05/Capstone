@@ -12,31 +12,31 @@
 <body class = "nt" data-rh="class">
   <div class="navigation">
     <h1> Porosite ushqimin prej shpisë. </h1>
-    <div class = "ah e6 e7">
-      <div class="ai ag dp e8">
-        <label id = "location-label" for="location-input" class = "cd ce cf cg ch ci cj">Enter delivery address</label>
-        <div class = "e9">
-          <div class="ba c4 ea b9 eb ec aw ax af b0 ed ee ah ag">
-            <div class = "ef ah bp bf">
-              <div class = "de dd eg">
-                <svg width = "24px" height = "24px" fill = "none" viewBox = "0 0 24 24" xmlns ="http://www.w3.org/2000/svg" aria-hidden="true"
-                focusable = "false">
-                  <path d="M17.5834 5.16602C14.5001 2.08268 9.50008 2.08268 6.41675 5.16602C3.33341 8.24935 3.33341 13.3327 6.41675 16.416L12.0001 21.9993L17.5834 16.3327C20.6667 13.3327 20.6667 8.24935 17.5834 5.16602ZM12.0001 12.416C11.0834 12.416 10.3334 11.666 10.3334 10.7493C10.3334 9.83268 11.0834 9.08268 12.0001 9.08268C12.9167 9.08268 13.6667 9.83268 13.6667 10.7493C13.6667 11.666 12.9167 12.416 12.0001 12.416Z" fill = "currentColor"></path>
-                </svg>
+    <form method = "POST" action="/browse">
+      
+      <div class = "ah e6 e7">
+        <div class="ai ag dp e8">
+          <div class = "e9">
+            <div class="ba c4 ea b9 eb ec aw ax af b0 ed ee ah ag">
+              <div class = "ef ah bp bf">
+                <div class = "de dd eg">
+                  <svg width = "24px" height = "24px" fill = "none" viewBox = "0 0 24 24" xmlns ="http://www.w3.org/2000/svg" aria-hidden="true"
+                  focusable = "false">
+                    <path d="M17.5834 5.16602C14.5001 2.08268 9.50008 2.08268 6.41675 5.16602C3.33341 8.24935 3.33341 13.3327 6.41675 16.416L12.0001 21.9993L17.5834 16.3327C20.6667 13.3327 20.6667 8.24935 17.5834 5.16602ZM12.0001 12.416C11.0834 12.416 10.3334 11.666 10.3334 10.7493C10.3334 9.83268 11.0834 9.08268 12.0001 9.08268C12.9167 9.08268 13.6667 9.83268 13.6667 10.7493C13.6667 11.666 12.9167 12.416 12.0001 12.416Z" fill = "currentColor"></path>
+                  </svg>
+                </div>
               </div>
+              <div class="spacer _16"></div>
+              <input type = "text" id = "locat" name = "locat" placeholder="Enter your city" style="width:500px;">
+        
             </div>
-            <div class="spacer _16"></div>
-            <input type="text" role="combobox" aria-expanded="false" id="location-typeahead-home-input" aria-autocomplete="list"
-            aria-controls="location-typeahead-home-menu" aria-labelledby="location-typeahead-home-label" autocomplete="off"
-            value name="searchTerm" placeholder = "Enter delivery address" class="dp aw eh ei ej ek el em en">
-            <div class = "spacer _8"></div>
           </div>
         </div>
-        <ul id="location-menu" role="listbox" aria-labelledby="location-label" class = "dr cd eo ap db ep eq"></ul>
+        
+            <div class="spacer _8"></div>
+            <button class="b8 b9 ba bb bc bd ev ah bf bg b0 bh bi bj bk bl dv bn bo c1 ew"  id = "forward-button" type="submit" data-test="forward-button"> Find Me Food</button>
       </div>
-      <div class="spacer _8"></div>
-      <button class="b8 b9 ba bb bc bd ev ah bf bg b0 bh bi bj bk bl dv bn bo c1 ew"> Find Me Food</button>
-    </div>
+    </form>
   </div>
 </body>
 

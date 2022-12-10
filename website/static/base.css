@@ -1,11 +1,10 @@
-header{
-    display: block;
-    
-}
-
 .ag{
-    position: relative;
-    background-color: blue;
+    top: 0;
+    
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+
+    
 }
 
 div{
@@ -20,9 +19,7 @@ div{
     right: 0;
 }
 
-.da{
-    background: transparent;
-}
+
 
 .d9{
     transition-property: background;
@@ -49,10 +46,11 @@ div{
 
 .d4{
     max-width: 1920px;
+    border-bottom: 3px solid #333;
 }
 
 .cd{
-    position: absolute;
+    position: static;
 }
 
 .bf{
@@ -103,7 +101,7 @@ div{
     overflow: hidden;
 }
 .ag{
-    position: relative;
+    position: absolute;
 }
 
 .do{
@@ -134,7 +132,7 @@ div{
 }
 
 .cd{
-    position: absolute;
+    position: absolute
 }
 
 .aw{
@@ -190,6 +188,7 @@ div{
 
 .c4{
     font-size: 16px;
+    background-color: black;
 }
 
 .bh{

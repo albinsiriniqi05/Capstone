@@ -1,18 +1,38 @@
-function deleteTask(taskId) {
-  fetch("/delete-task", {
-    method: "POST",
-    body: JSON.stringify({ taskId: taskId }),
-  }).then((_res) => {
-    window.location.href = "/kanban";
-  });
-}
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
 
-function moveTask(taskId, newStatus) {
-console.log(newStatus)
-fetch("/move-task", {
-  method: "POST",
-  body: JSON.stringify({ taskId: taskId, newStatus: newStatus }),
-}).then((_res) => {
-  window.location.href = "/kanban";
+$(window).scroll(function(event){
+    didScroll = true;
 });
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    console.log(st, "This")
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
 }

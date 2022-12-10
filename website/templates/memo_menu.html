@@ -1,0 +1,70 @@
+{% extends "base.html" %} 
+{% block title %}Add your tasks{% endblock %} 
+
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='menu.css') }}"> 
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<html>
+    <div class = "site-wrap">
+        <div class="body-content">
+            <div class = "horizontal-bar">
+            </div>
+            <div class = "vertical-bar">
+            </div>
+            
+            <div class = "pizzas">
+                <div class = "tx"> 
+                    Pizzas
+                </div>
+                
+                <div class = "pizza-types">
+            {% for product in products %}
+                <form style="display: inline-block;" method="post" action="/add">
+                    <div class = "item">
+                        
+                        <div class="picture">
+                            <img src="{{url_for('static',filename= '/images/' + product[2])}}" class="restoranbanner">
+                        </div>
+                        <div class = "item-content">
+                            <div class = "text">
+                                <span style="color:white;">  {{product[1]}} </span>
+                            </div>
+                
+                            <div class = "add-to-cart">
+                                <h4 class="price"> <span style="color:white ;"> $ {{ product[3] }} </span></h4>
+                                <input type="hidden" name = "code" value="{{product[0]}}" />
+                                <input type="text" class = "product-quantity" name = "quantity" value = "1" size="2" />
+                                <input type = "submit" value = "Add to cart" class = "default-btn"/>
+
+                            </div>
+                        
+                            
+                        </div>
+    
+                    </div>
+                </form>
+                 
+            {% endfor %}
+
+                    
+                    
+
+                    
+
+    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+
+{% endblock %}
+

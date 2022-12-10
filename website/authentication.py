@@ -32,6 +32,7 @@ def login():
 
 
     return render_template("login.html", user=current_user)
+    
 
 
 @auth.route('/logout')
@@ -58,8 +59,7 @@ def sign_up():
         email = request.form.get('email')
         first_name = request.form.get('firstName')
         last_name = request.form.get('lastName')
-        password1 = request.form.get('password1')
-        password2 = request.form.get('password2')
+        password1 = request.form.get('password')
 
         user = User.query.filter_by(email=email).first()
         if user:
@@ -70,8 +70,6 @@ def sign_up():
             flash('First name must contain more than 2 characters.', category='error')
         elif len(last_name) < 3:
             flash('Last name must contain more than 2 characters.', category='error')
-        elif password1 != password2:
-            flash('Passwords don\'t match. Please try again.', category='error')
         elif len(password1) < 8:
             flash('Password must be at least 8 characters.', category='error')
         else:

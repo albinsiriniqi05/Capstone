@@ -1,0 +1,56 @@
+{% extends "base.html" %} 
+{% block title %}Add your tasks{% endblock %} 
+
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='browse.css') }}"> 
+</head>
+
+<html>
+    <body data-spy="scroll" data-target=".site-wrap" data-offset="300" data-aos-easing="slide" data-aos-duration="800">
+        <div class = "site-wrap">
+            <div class="body-content">
+                <div class = "horizontal-bar">
+                    
+                </div>
+            
+                <div class = "restaurants">
+                {% for restaurant in restaurants%}
+                    <div class = "res">
+                        <div class="pic">
+                            <a href="{{restaurant[3]}}">
+                                <img src="{{url_for('static',filename= '/images/' + restaurant[2])}}" class="restoranbanner">
+                            </a>
+                        </div>
+                        <div class = "content-table">
+                            <div class = "text">
+                                <span style="color:white;"> {{restaurant[1]}} </span>
+                            
+                            </div>
+            
+                            <div class = "menu-button">
+                                <a rel="nofollow" tabindex="0" href = "{{restaurant[3]}}" data-test="menu" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci ax dr ds dt bn bo du" style="background-color: white;">
+                                    <div class = "spacer _5"></div>
+                                    <span style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 10px; font-weight:700; color: black;"> Show menu </span>
+                                </a>
+                            </div>
+                    
+                        
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+                    
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
+
+{% endblock %}
+

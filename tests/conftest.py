@@ -6,7 +6,7 @@ from flask import json
 from werkzeug.security import generate_password_hash
 from tests import test_credentials
 sys.path.append('../')
-from kanban_website import create_app, db, DBmodel
+from website import create_app, db, DBmodel
 
 
 t_user = test_credentials.Test_User()

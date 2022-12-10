@@ -46,6 +46,10 @@ div{
     flex-direction: column;
 }
 
+.fe{
+    display: flex;
+}
+
 .ae{
     display: flex;
 }
@@ -145,6 +149,11 @@ h1{
 
 .ao{
     width: 100%;
+}
+
+.fn{
+    width: 48%;
+    float: right;
 }
 
 .by{

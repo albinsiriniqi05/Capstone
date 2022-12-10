@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, url_for
 from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
@@ -32,14 +32,15 @@ def create_app(test_config=None):
     create_database(app)
 
     login_manager = LoginManager()
+    
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
 
     @login_manager.user_loader
     def load_user(id):
         return User.query.get(int(id))
-
     return app
+    
 
 
 def create_database(app, db_nm=DB_NAME):

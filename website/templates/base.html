@@ -25,8 +25,8 @@
     <header>
       <div>
         <div>
-          <div class = "ag">
-            <div class="d4 d5 d6 b0 d7 ah am bf b6 d8 d9 da ax cd ao ap db dc">
+          <div class = "ag" id = "navbar">
+            <div class="d4 d5 d6 b0 d7 ah am bf b6 d8 d9 da ax cd ao ap db dc" style="background-color:grey;">
               <div class = "spacer _32"></div>
               <div class="spacer _128"></div>
               <div class="ag di dj cg">
@@ -35,22 +35,23 @@
               <div class="dp"></div>
               <div class = "spacer _24"></div>
               {% if user.is_authenticated %}
-              <a rel="nofollow"  tabindex="0" href="/login" data-test="header-sign-in" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci ax dr ds dt bn bo du">
-                <svg aria-hidden="true" focusable = "false" viewBox = "0 0 26 26" class="df dg c3 cc">
-                  <path fill-rule = "evenodd" clip-rule = "evenodd" d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"></path>
+              <a rel="nofollow"  tabindex="0" href="/checkout" data-test="header-sign-in" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci ax dr ds dt bn bo du">
+                <svg aria-hidden="true" focusable = "false" viewBox = "0 0 22 16" class="df dg c3 cc" style="color:white ;">
+                  <path fill-rule = "evenodd" clip-rule = "evenodd" d="M3.666 11.333h10.333l1.334-8h-11l-.267-2h-3.4v2h1.667l1.333 8zm1.333 3.334A1.333 1.333 0 105 12a1.333 1.333 0 000 2.667zm9.334-1.334a1.333 1.333 0 11-2.667 0 1.333 1.333 0 012.667 0z"></path>
                 </svg>
                 <div class = "spacer _5"></div>
-                Log In
+                <span style="color: white;"> Cart </span>
+                <span style="margin-left: 6px;color: white;"> {{ session['all_total_quantity'] }} </span>
               </a>
               <div class = "spacer _18"></div>
-              <a rel = "nofollow" tabindex="0" href="/signup" data-test="header-sign-up" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci bj bk bl dv bn bo du">Sign Up</a>
+              <a rel = "nofollow" tabindex="0" href="/logout" data-test="header-log-out" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci bj bk bl dv bn bo du"> <span style="color:white ;">Log Out </span> </a>
               {% else %}
               <a rel="nofollow"  tabindex="0" href="/login" data-test="header-sign-in" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci ax dr ds dt bn bo du">
                 <svg aria-hidden="true" focusable = "false" viewBox = "0 0 26 26" class="df dg c3 cc">
                   <path fill-rule = "evenodd" clip-rule = "evenodd" d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"></path>
                 </svg>
                 <div class = "spacer _5"></div>
-                "Log In" 
+                Log In 
               </a>
               <div class = "spacer _18"></div>
               <a rel = "nofollow" tabindex="0" href="/sign-up" data-test="header-sign-up" class="c4 c5 ba bb bc dq be ah bf bg b0 bh c9 ci bj bk bl dv bn bo du">Sign Up</a>
@@ -98,9 +99,9 @@
     ></script>
     
     <script
-    type="text/javascript"
-    src="{{ url_for('static', filename='index.js') }}"
-  ></script>
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
 
   </body>
 </html>
