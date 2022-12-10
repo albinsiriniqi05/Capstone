@@ -1,6 +1,9 @@
 # Food Delivery App
 
-
+***Before doing any of the steps below: 
+1.Go to functionality.py and change ![image](https://user-images.githubusercontent.com/66482473/206877119-44fc69a4-e8dc-4276-b481-20f86aa3b1ee.png)
+to the exact location of the database on your computer. To find it, right click on the database.db file, click properties, and copy the location of the database. Add \database.db to the end of it. 
+Also, make sure to use the database that's present in the repo, as I have manually added some data on it. If you delete the database, and create a new one, the records will be deleted, and the app will not run.***
 
 
 ## Setup & Installtion
